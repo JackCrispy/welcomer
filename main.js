@@ -66,3 +66,4 @@ bot.on('guildMemberAdd', member => {
 
 const config = require('./data/config.json')
 bot.login(config.token)
+//699999999999999999999999
