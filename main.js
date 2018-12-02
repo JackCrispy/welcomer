@@ -64,4 +64,6 @@ bot.on('guildMemberAdd', member => {
   console.log(`${member}`, "has joined" + `${member.guild.name}`)
 });
 
-bot.login("config.token")
+const config = require('./data/config.json')
+bot.login(config.token)
+//699999999999999999999999
