@@ -1,4 +1,3 @@
-
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const t = require('timers')
@@ -13,15 +12,15 @@ let activities = [
     }
   },
   {
-    name:"PewDiePie",
+    name:"for new users!",
     options:{
       type:"WATCHING"
     }
   },
   {
-    name:"to L-Series",
+    name:"for new users!",
     options:{
-      type:"LISTENING"
+      type:"WATCHING"
     }
   }
 ]
@@ -36,7 +35,7 @@ bot.on('ready', () => {
     }, 15000)
 
     
-bot.emit("guildMemberAdd", bot.guilds.first().members.first());
+//bot.emit("guildMemberAdd", bot.guilds.first().members.first());
 });
 
 
@@ -52,8 +51,8 @@ bot.on('guildMemberAdd', member => {
       };
       
       let str = `Welcome to the ${member.guild} Community Discord Server, 
-**${member.user.tag}**! You are the **#${suffixed} ** member!
-\nMake sure to check out L-Series channel and subscribing by clicking [here](https://www.youtube.com/channel/UCodPWCQ7VAXJJiwDV24satw) if you're not already ${member.client.emojis.get("518621105242767360")}` //wrong id?
+**${member.user.tag}**! You are the **${suffixed} ** member!
+\nMake sure to check out L-Series channel and subscribing by clicking [here](https://www.youtube.com/channel/UCodPWCQ7VAXJJiwDV24satw) if you're not already ${member.client.emojis.get("515702715624718346")}` //wrong id?
       const embed = new Discord.RichEmbed()
       .setAuthor(member.user.tag, memberavatar)
       .setColor('363A3F')
@@ -65,4 +64,4 @@ bot.on('guildMemberAdd', member => {
   console.log(`${member}`, "has joined" + `${member.guild.name}`)
 });
 
-bot.login("sorry.no.buddy :)")
+bot.login("config.token")
