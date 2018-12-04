@@ -44,7 +44,7 @@ bot.on('guildMemberAdd', member => {
   let end = count[count.length-1]
   let suffixed = end == 1 ? count + "st" : end == 2 ? count + "nd" : end == 3 ? count + "rd" : count + "th" 
   const channel = member.guild.channels.find(chnl => chnl.name === 'welcome');
-  const memberavatar = member.user.avatarURL
+  const memberavatar = member.user.displayAvatarURL
       if (!channel) {
         console.log("Channel Missing - line:14");
         return;
@@ -56,7 +56,7 @@ bot.on('guildMemberAdd', member => {
       .setAuthor(member.user.tag, memberavatar)
       .setColor('363A3F')
       .setDescription(str)
-      .setThumbnail(memberavatar) // `.displayAvatarURL` should do the trick
+      .setThumbnail(memberavatar) // using member.user.displayAvatarURL
       .setTimestamp();
       channel.send(embed);
   
