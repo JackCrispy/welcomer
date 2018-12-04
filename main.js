@@ -57,7 +57,7 @@ bot.on('guildMemberAdd', member => {
       .setAuthor(member.user.tag, memberavatar)
       .setColor('363A3F')
       .setDescription(str)
-      .setThumbnail(memberavatar)
+      .setThumbnail(memberavatar) // `.displayAvatarURL` should do the trick
       .setTimestamp();
       channel.send(embed);
   
