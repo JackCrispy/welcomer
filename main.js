@@ -50,7 +50,7 @@ bot.on('guildMemberAdd', member => {
         return;
       };
       
-      let str = `Welcome to the ${member.guild} Community Discord Server,**${member.user.username}**! \nYou are the **${suffixed} ** member!
+      let str = `Welcome to the ${member.guild} Community Discord Server, **${member.user.username}**! \nYou are the **${suffixed}** member!
 \nMake sure to check out L-Series' channel and subscribing by clicking [here](https://www.youtube.com/channel/UCodPWCQ7VAXJJiwDV24satw) if you're not already ${member.client.emojis.get("515702715624718346")}` //wrong id?
       const embed = new Discord.RichEmbed()
       .setAuthor(member.user.tag, memberavatar)
