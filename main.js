@@ -36,11 +36,6 @@ bot.on('ready', () => {
     }, 15000)
 });
 
-let prefix = config.prefix;
-
-  if (message.content.startsWith(prefix + "ping")) {
-    message.channel.send("pong!");
-
 bot.on('guildMemberAdd', member => {
   let count = member.guild.memberCount.toString() 
   let end = count[count.length-1]
