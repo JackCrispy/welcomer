@@ -3,6 +3,7 @@ const bot = new Discord.Client();
 const t = require('timers')
 const client = new Discord.Client;
 const timers = require('timers')
+const config = require('./data/config.json')
 
 let activities = [
   {
@@ -33,11 +34,12 @@ bot.on('ready', () => {
       bot.user.setActivity(activities[i].name, activities[i].options)
       i++
     }, 15000)
-
-    
-//bot.emit("guildMemberAdd", bot.guilds.first().members.first());
 });
 
+let prefix = config.prefix;
+
+  if (message.content.startsWith(prefix + "ping")) {
+    message.channel.send("pong!");
 
 bot.on('guildMemberAdd', member => {
   let count = member.guild.memberCount.toString() 
@@ -46,7 +48,7 @@ bot.on('guildMemberAdd', member => {
   const channel = member.guild.channels.find(chnl => chnl.name === 'welcome');
   const memberavatar = member.user.displayAvatarURL
       if (!channel) {
-        console.log("Channel Missing - line:14");
+        console.log("Channel Not found.");
         return;
       };
       
@@ -63,6 +65,4 @@ bot.on('guildMemberAdd', member => {
   console.log(`${member}`, "has joined" + `${member.guild.name}`)
 });
 
-const config = require('./data/config.json')
 bot.login(config.token)
-//699999999999999999999999
