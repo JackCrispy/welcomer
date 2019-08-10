@@ -1,6 +1,5 @@
 {
   "token": "bruh",
-  "log_channel": "channel where logs go",
   "prefix": "!",
   "welcome_channel": "channel where bot sends messages", 
   "customtext": "Have a great time.",
