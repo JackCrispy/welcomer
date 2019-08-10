@@ -12,6 +12,7 @@ const type1 = config.type1
 const activity2 = config.activity2
 const type2 = config.type2
 const time1 = config.activitytime
+const embedColor = config.embedColor
 const ownerID = config.ownerID
 ////////////////////////////////////////////////////
 
@@ -75,7 +76,7 @@ let i = 0;
       \n${customtext} ${member.client.emojis.get(`${emojiID}`)}`
       const embed = new Discord.RichEmbed()
       .setAuthor(member.user.tag, memberavatar)
-      .setColor('363A3F')
+      .setColor(`${embedColor}`)
       .setDescription(str)
       .setThumbnail(memberavatar)
       .setFooter(`📥 ${member.user.username} Joined!`)
