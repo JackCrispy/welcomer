@@ -1,18 +1,15 @@
 {
-  "owners": [
-    "340766966077980674",
-    "203617993853370368",
-    "483729964890325004"
-  ],
-  "invite": null,
-  "prefix": "*",
-  "token": "your.token.here",
-  "dbots_token": null,
-  "log_channel": "486692591170224128",
-  "__COMMENT__": "This is the section that used to be TESTCFG.JSON",
+  "token": "bruh",
+  "log_channel": "channel where logs go",
   "prefix": "!",
-  "red": "#b70000",
-  "orange": "#ff6a00",
-  "green": "#00ff26",
-  "purple": "#d604cf"
+  "welcome_channel": "channel where bot sends messages", 
+  "customtext": "Have a great time.",
+  "emojiID": "",
+  "logchannel": "where the mod logs for users go",
+  "activity1": "for new users!",
+  "type1": "WATCHING",
+  "activity2": "version 2.0",
+  "type2": "PLAYING",
+  "activitytime": "15000",
+  "ownerID": "owner ID only one"
 }
