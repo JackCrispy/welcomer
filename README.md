@@ -16,6 +16,7 @@
   "activity2": "version 2.0",
   "type2": "PLAYING",
   "activitytime": "15000",
+  "embedColor": "363A3F",
   "ownerID": "the OwnerID to preform commands. ONLY ONE"
-}```
+}
 
