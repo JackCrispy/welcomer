@@ -76,7 +76,7 @@ let i = 0;
       };
       const guildspot = guildconfig || member.guild
       const emojispot = ` ` || `${member.client.emojis.get(`${emojiID}`)}`
-      let title1 = `${etitle}` || member.guild
+ //   let title1 = `${etitle}` || member.guild
       let str = `Welcome to ${guildspot}! **${member.user.username}**! \nYou are the **${suffixed}** member!
       \n${customtext} ${emojispot}`
       const embed = new Discord.RichEmbed()
