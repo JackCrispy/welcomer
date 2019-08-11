@@ -13,7 +13,7 @@ const type2 = config.type2
 const time1 = config.activitytime
 const ownerID = config.ownerID
 const customtext = config.customtext
-const etitle = config.embed_title
+//const etitle = config.embed_title
 const guildconfig = config.embed_guildname
 const ecolor = config.embed_color
 ////////////////////////////////////////////////////
@@ -82,7 +82,7 @@ let i = 0;
       const embed = new Discord.RichEmbed()
       .setAuthor(member.user.tag, memberavatar)
       .setColor(ecolor)
-      .setTitle(`${title1}`)
+  //  .setTitle(`${title1}`)
       .setDescription(str)
       .setThumbnail(memberavatar)
       .setFooter(`📥 ${member.user.username} Joined!`)
