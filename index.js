@@ -3,17 +3,19 @@ const client = new Discord.Client;
 const timers = require('timers')
 const config = require('./data/config.json')
 ///////////////////////////////////////////////////
-const welcome_channel = config.welcome_channel   
-const customtext = config.customtext               
-const emojiID = config.emojiID
+const welcome_channel = config.welcome_channel               
+const emojiID = config.embed_emoji
 const logc = config.logchannel
 const activity1 = config.activity1
 const type1 = config.type1
 const activity2 = config.activity2
 const type2 = config.type2
 const time1 = config.activitytime
-const embedColor = config.embedColor
 const ownerID = config.ownerID
+const customtext = config.customtext
+const etitle = config.embed_title
+const guildconfig = config.embed_guildname
+const ecolor = config.embed_color
 ////////////////////////////////////////////////////
 
 //Activites Const
@@ -72,11 +74,15 @@ let i = 0;
         console.log("Set channel name in config.");
         return;
       };
-      let str = `Welcome to ${member.guild}! **${member.user.username}**! \nYou are the **${suffixed}** member!
-      \n${customtext} ${member.client.emojis.get(`${emojiID}`)}`
+      const guildspot = guildconfig || member.guild
+      const emojispot = ` ` || `${member.client.emojis.get(`${emojiID}`)}`
+      let title1 = `${etitle}` || member.guild
+      let str = `Welcome to ${guildspot}! **${member.user.username}**! \nYou are the **${suffixed}** member!
+      \n${customtext} ${emojispot}`
       const embed = new Discord.RichEmbed()
       .setAuthor(member.user.tag, memberavatar)
-      .setColor(`${embedColor}`)
+      .setColor(ecolor)
+      .setTitle(`${title1}`)
       .setDescription(str)
       .setThumbnail(memberavatar)
       .setFooter(`📥 ${member.user.username} Joined!`)
