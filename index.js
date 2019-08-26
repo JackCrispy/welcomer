@@ -75,7 +75,7 @@ let i = 0;
         return;
       };
       const guildspot = guildconfig || member.guild
-      const emojispot = ` ` || `${member.client.emojis.get(`${emojiID}`)}`
+      const emojispot = ` ` || `${emojiID}`
  //   let title1 = `${etitle}` || member.guild
       let str = `Welcome to ${guildspot}! **${member.user.username}**! \nYou are the **${suffixed}** member!
       \n${customtext} ${emojispot}`
