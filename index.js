@@ -46,9 +46,9 @@ let i = 0;
 
   //On Message
   client.on("message", async message =>{
-  if (message.content === "!add" && message.author.id === "532677204220444682")
+  if (message.content === "!add" && message.author.id === `${ownerID}`)
   client.emit('guildMemberAdd', message.member);
-  if (message.content === "!remove" && message.author.id === "532677204220444682")
+  if (message.content === "!remove" && message.author.id === `${ownerID}`)
   client.emit('guildMemberRemove', message.member);
 
   if (message.content === "!ping" && message.author.id === `${ownerID}`)
