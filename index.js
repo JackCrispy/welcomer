@@ -37,6 +37,7 @@ let i = 0;
 //On Ready
   client.on('ready', () => {
     console.log(`${client.user.username} has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
+    
     timers.setInterval(() => {
       i = i == activities.length ? 0 : i
       client.user.setActivity(activities[i].name, activities[i].options)
@@ -52,7 +53,7 @@ let i = 0;
   client.emit('guildMemberRemove', message.member);
 
   if (message.content === "!ping" && message.author.id === `${ownerID}`)
-  message.channel.send(`Hoold on!`).then(m => {
+  message.channel.send(`Pinging...!`).then(m => {
     m.edit(
       `:ping_pong: Wew, made it over the ~waves~ ! **Pong!**\nMessage edit time is ` +
         (m.createdTimestamp - message.createdTimestamp) +
