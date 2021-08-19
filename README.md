@@ -1,7 +1,7 @@
 # Welcomer Bot v2
 ### New faster welcomer bot. Now fully custom!
 
-# This is for disord.js v 11. I no longer update this, the code isn't the best. 
+# This is for discord.js v 11. I no longer update this, the code isn't the best. 
 
 ## Config Setup
 ```
